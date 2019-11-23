@@ -35,6 +35,9 @@ public class DiDemoApplication {
  - We asked context which holds reference to the bean to call a method to call hello()
  - Property based and setter based DI requires "@AutoReWired" ...only constructor based doesent
  - Remember that constructor based DI is the most preferred
+ - Use @Qualifier - when you create more than one bean of the same type and want to wire only one of them with a property
+ - @Qualifier("getterGreetingService") - the argument is the bean name
+ - Use the @Qualifier annotation along with @Autowired to remove the confusion by specifying which exact bean will be wired.
 
  Questions
  1. What are the annotations of Spring ?

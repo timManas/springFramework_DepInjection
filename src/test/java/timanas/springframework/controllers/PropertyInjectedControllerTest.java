@@ -16,13 +16,11 @@ public class PropertyInjectedControllerTest {
     @Before
     public void setUp() throws Exception {
         this.propertyInjectedController = new PropertyInjectedController();
-        this.propertyInjectedController.greetingService = new GreetingServiceImpl();
+        this.propertyInjectedController.greetingServiceImpl = new GreetingServiceImpl();
     }
 
     @Test
     public void testGreeting() throws Exception {
         assertEquals(GreetingServiceImpl.HELLO_GURUS, propertyInjectedController.sayHello());
     }
-
-
 }
