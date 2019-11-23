@@ -37,7 +37,7 @@ public class DiDemoApplication {
  - @Qualifier("getterGreetingService") - the argument is the bean name
  - Use the @Qualifier annotation along with @Autowired to remove the confusion by specifying which exact bean will be wired.
  - @Primary - If there is more than one mean then use this one
- - default is only active when there is no other profiles active 
+ - default is only active when there is no other profiles active
 
 
  Questions
