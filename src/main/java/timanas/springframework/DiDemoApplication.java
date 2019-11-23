@@ -16,13 +16,11 @@ public class DiDemoApplication {
 
 		MyController controller = (MyController) ctx.getBean("myController");
 
-		controller.hello();
-
+		System.out.println(controller.hello());
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 	}
-
 }
 
 
@@ -38,7 +36,7 @@ public class DiDemoApplication {
  - Use @Qualifier - when you create more than one bean of the same type and want to wire only one of them with a property
  - @Qualifier("getterGreetingService") - the argument is the bean name
  - Use the @Qualifier annotation along with @Autowired to remove the confusion by specifying which exact bean will be wired.
-
+-- @Primary - If there is more than one mean then use this one
  Questions
  1. What are the annotations of Spring ?
  2. What is the lifecycle of Spring ?

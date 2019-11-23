@@ -1,17 +1,17 @@
 package timanas.springframework.services;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by timmanas on 2019-11-23.
  */
 @Service
-public class GreetingServiceImpl implements GreetingService {
-
-    public static final String HELLO_GURUS = "Hello Gurus!!!! - Original";
+@Primary
+public class PrimaryGreetingService implements GreetingService {
 
     @Override
     public String sayGreeting() {
-        return HELLO_GURUS;
+        return "Hello - Primary Greeting service";
     }
 }
