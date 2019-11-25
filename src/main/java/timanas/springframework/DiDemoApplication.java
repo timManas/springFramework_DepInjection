@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import timanas.springframework.examplebeans.FakeDataSource;
+import timanas.springframework.examplebeans.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -18,6 +19,9 @@ public class DiDemoApplication {
 
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 		System.out.println(fakeDataSource.getUser());
+
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+		System.out.println(fakeJmsBroker.getUsername());
 	}
 }
 
@@ -36,6 +40,8 @@ public class DiDemoApplication {
  - Use the @Qualifier annotation along with @Autowired to remove the confusion by specifying which exact bean will be wired.
  - @Primary - If there is more than one mean then use this one
  - default is only active when there is no other profiles active
+ - You can have multiple properties  file
+ - You can use YAML to create application properties file ex. "application.yml" in resources
 
 
  Questions
